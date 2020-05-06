@@ -1,0 +1,36 @@
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    mapperScanPackage: ink.boyuan.rbac_shiro.mapper
+    typeAliasesPackage: ink.boyuan.rbac_shiro.mapper
+  mapper-locations:
+  - classpath*:ink/boyuan/rbac_shiro/mapper/*Mapper.xml
+server:
+  port: 8088
+spring:
+  datasource:
+    cachePrepStmts: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    driver-class-name: com.mysql.jdbc.Driver
+    druidLoginName: wjf
+    druidPassword: wjf
+    filters: stat
+    initialSize: 10
+    maxActive: 100
+    maxPoolPreparedStatementPerConnectionSize: 50
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 5
+    password: Wyy6251935@
+    poolPreparedStatements: true
+    removeAbandoned: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.97.188.93:3306/shirotest?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=UTC
+    useGlobalDataSourceStat: true
+    username: wyy
+    validationQuery: select 'x'
